@@ -1,4 +1,4 @@
-var weddingDate = new Date("May 11, 2025 01:00:00").getTime();
+var weddingDate = new Date("May 11, 2025 00:00:00").getTime();
 
 function updateCountdown() {
     var now = new Date().getTime();
