@@ -9,7 +9,30 @@ function updateCountdown() {
     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML = days + " dana " + hours + " sata " + minutes + " minuta " + seconds + " sekundi";
+    if(days > 1){
+        document.getElementById("countdown").innerHTML += days + " dana ";
+    }
+    else {
+        document.getElementById("countdown").innerHTML += days + " dan ";
+    }
+    if(hours > 1){
+        document.getElementById("countdown").innerHTML += hours + " sata ";
+    }
+    else {
+        document.getElementById("countdown").innerHTML += hours + " sat ";
+    }
+    if(minutes > 1){
+        document.getElementById("countdown").innerHTML += minutes + " minuta ";
+    }
+    else {
+        document.getElementById("countdown").innerHTML += minutes + " minut ";
+    }
+    if(seconds > 1){
+        document.getElementById("countdown").innerHTML += seconds + " sekundi ";
+    }
+    else {
+        document.getElementById("countdown").innerHTML += seconds + " sekunda";
+    }
 }
 
 updateCountdown();
