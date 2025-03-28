@@ -1,4 +1,4 @@
-var weddingDate = new Date("May 11, 2025 00:00:00").getTime();
+var weddingDate = new Date(Date.UTC(2025, 4, 11, 0, 0, 0)).getTime();
 
 function updateCountdown() {
     var now = new Date().getTime();
@@ -35,4 +35,4 @@ function updateCountdown() {
     }
 }
 
-updateCountdown();
+setInterval(updateCountdown, 1000);
