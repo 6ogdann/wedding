@@ -10,30 +10,12 @@ function updateCountdown() {
     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    if(days > 1){
-        document.getElementById("countdown").innerHTML += days + " dana ";
-    }
-    else {
-        document.getElementById("countdown").innerHTML += days + " dan ";
-    }
-    if(hours > 1){
-        document.getElementById("countdown").innerHTML += hours + " sata ";
-    }
-    else {
-        document.getElementById("countdown").innerHTML += hours + " sat ";
-    }
-    if(minutes > 1){
-        document.getElementById("countdown").innerHTML += minutes + " minuta ";
-    }
-    else {
-        document.getElementById("countdown").innerHTML += minutes + " minut ";
-    }
-    if(seconds > 1){
-        document.getElementById("countdown").innerHTML += seconds + " sekunde ";
-    }
-    else {
-        document.getElementById("countdown").innerHTML += seconds + " sekunda";
-    }
+    document.getElementById("countdown").innerHTML =
+        days + (days === 1 ? " dan " : " dana ") +
+        hours + (hours === 1 ? " sat " : " sata ") +
+        minutes + (minutes === 1 ? " minut " : " minuta ") +
+        seconds + (seconds === 1 ? " sekunda" : " sekunde");
 }
 
 updateCountdown();
+setInterval(updateCountdown, 1000);
