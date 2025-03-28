@@ -28,7 +28,7 @@ function updateCountdown() {
         document.getElementById("countdown").innerHTML += minutes + " minut ";
     }
     if(seconds > 1){
-        document.getElementById("countdown").innerHTML += seconds + " sekundi ";
+        document.getElementById("countdown").innerHTML += seconds + " sekunde ";
     }
     else {
         document.getElementById("countdown").innerHTML += seconds + " sekunda";
