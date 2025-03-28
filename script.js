@@ -9,7 +9,7 @@ function updateCountdown() {
     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML = days + " dana " + hours + " sati " + minutes + " minuta " + seconds + " sekundi";
+    document.getElementById("countdown").innerHTML = days + " dana " + hours + " sata " + minutes + " minuta " + seconds + " sekundi";
 }
 
 updateCountdown();
