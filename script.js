@@ -1,4 +1,4 @@
-var localWeddingDate = new Date(2025, 4, 11, 1, 0, 0); 
+var localWeddingDate = new Date(2025, 4, 11, 0, 0, 0); 
 var weddingDate = localWeddingDate.getTime();
 
 function updateCountdown() {
